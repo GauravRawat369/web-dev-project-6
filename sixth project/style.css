@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.main_div{
+
+    background-image: url(images/snowfall-5909261_1920.jpg);
+    opacity: .9;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;  
+    background-position: center;
+    overflow: hidden;
+}
+.nav_bar{
+    height: 80px;
+    width: 100%;
+    background-color: rgba(81, 81, 81, 0.7);
+}
+.logo{
+    margin-left: 10px;
+    margin-top: 15px;
+    width: 10%;
+}
+
+.header ul{
+    float: right;
+    margin-right: 20px;
+}
+.header ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+    margin-right: 10px;
+}
+.header ul li a{
+    color: white;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.checkbtn{
+    font-size: 25px;
+    color: white;
+    float: right;
+    line-height:55px;
+    margin-right: 40px;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media(max-width:752px)
+{
+
+    .nav_bar{
+        height: 60px;
+
+    }
+    .header ul li{
+        line-height: 50px;
+    }
+    .header ul li a{
+        font-size: 15px;
+    }
+}
+@media(max-width:600px)
+{
+    .checkbtn{
+        font-size: 25px;
+
+        line-height: 55px;
+
+        display: block;
+    }
+    .header ul{
+        position: fixed;
+        width: 100%;
+        height: 200px;
+        background-color: black;
+        top: 60px;
+        left: -100%;
+        text-align: center;
+        transform: all .7s;
+    }
+    .header ul li{
+        display: block;
+    }
+    #check:checked ~ul{
+       left:0
+    } 
+    .nav_bar{
+        background-color: rgba(58, 63, 99, 0.7);
+    }
+    .main_div{
+        background: linear-gradient(rgb(24, 11, 56),rgb(9, 52, 131),rgb(42, 6, 91));
+    }
+}
